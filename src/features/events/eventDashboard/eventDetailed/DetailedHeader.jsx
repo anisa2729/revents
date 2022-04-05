@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Segment,Image,Item,Header,Button } from 'semantic-ui-react';
 
 const eventImageStyle = {
-    filter: 'brightness(30%)'
+    filter: 'brightness(70%)'
+    
     };
     
     const eventImageTextStyle = {
@@ -19,7 +21,7 @@ export default function DetailedHeader(){
     return(
         <Segment.Group>
 <Segment basic attached="top" style={{padding: '0'}}>
-<Image src={`/assets/categoryImages/drinks.jpg`} fluid style={eventImageStyle}/>
+<Image src={`https://scontent.fktm6-1.fna.fbcdn.net/v/t1.6435-9/87071224_10215840927791403_995882901671247872_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=0nTqH6tqlvAAX9-YyDl&_nc_ht=scontent.fktm6-1.fna&oh=00_AT8-EBBxQUki1PfKF-xvLJ0YqNcOg92zVkpcNcjsLTsMqg&oe=626FFBC3`} fluid  style={eventImageStyle}/>
 
 <Segment basic style={eventImageTextStyle}>
 <Item.Group>
@@ -44,7 +46,7 @@ Hosted by <strong>Bob</strong>
 <Button>Cancel My Place</Button>
 <Button color="teal">JOIN THIS EVENT</Button>
 
-<Button color="orange" floated="right">
+<Button as={Link} to={`/mnanage/`} color="orange" floated="right">
 Manage Event
 </Button>
 </Segment>
